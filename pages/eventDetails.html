@@ -13,6 +13,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="../assets/css/globalStyle.css">
+    <link rel="stylesheet" href="../assets/css/eventDetailsStyle.css">
 
 </head>
 
@@ -21,26 +22,59 @@
     <header class="app-header">
         <div class="header-inner">
             <!-- Optional back button, you can unhide it by removing the back-button-hidden class -->
-            <button class="back-btn back-button-hidden" onclick="history.back()">
+            <button class="back-btn" onclick="history.back()">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
 
-            <a href="./index.html" class="logo-tag">
+            <a href="../index.html" class="logo-tag">
                 <p class="logo">Plus One</p>
             </a>
 
-            <!-- This keeps the logo centered, because i put the invisible back button -->
-            <div class="header-spacer"></div>
+            <!-- Hidden until user clicks I'm Coming -->
+            <a id="viewAttendeesBtn" class="header-action hidden" href="#">
+                View Attendees
+            </a>
         </div>
     </header>
 
     <main>
-        <section id="eventDetailContainer">
-            <h1 id="eventTitle"></h1>
-            <p id="eventLocation"></p>
-            <div id="eventMeta"></div>
+        <section id="eventDetailContainer" class="event-detail">
+            <div class="event-hero" id="eventHero"></div>
+
+            <h1 id="eventTitle" class="event-title"></h1>
+
+            <div class="event-line">
+                <i class="fa-solid fa-user-group"></i>
+                <span id="eventPeopleCount">17 people are coming</span>
+            </div>
+
+            <div class="event-line">
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="eventLocation"></span>
+            </div>
+
+            <div class="event-line">
+                <i class="fa-solid fa-calendar"></i>
+                <span id="eventDate"></span>
+            </div>
+
+            <div class="event-line">
+                <i class="fa-solid fa-clock"></i>
+                <span id="eventTime">5pm</span>
+            </div>
+
+            <div class="event-desc">
+                <div class="event-desc-label">Description:</div>
+                <div id="eventDescription" class="event-desc-text"></div>
+            </div>
+
+            <div class="event-posted" id="eventPostedBy"></div>
         </section>
     </main>
+
+    <button id="imComingBtn" class="bottom-cta">
+        I’M COMING
+    </button>
 
     <script type="module" src="../assets/js/eventDetailsScript.js"></script>
     <script src="https://kit.fontawesome.com/320539620b.js" crossorigin="anonymous"></script>
