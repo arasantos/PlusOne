@@ -13,6 +13,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="../assets/css/globalStyle.css">
+    <link rel="stylesheet" href="../assets/css/designBStyle.css">
 
 </head>
 
@@ -21,7 +22,7 @@
     <header class="app-header">
         <div class="header-inner">
             <!-- Optional back button, you can unhide it by removing the back-button-hidden class -->
-            <button class="back-btn back-button-hidden" onclick="history.back()">
+            <button class="back-btn" onclick="history.back()">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
 
@@ -35,11 +36,20 @@
     </header>
 
     <main>
-        <!-- Your code goes hereee -->
+        <section id="design-b-container">
+            <div id="design-b-header">
+                <div></div>
+                <div>Name</div>
+                <div>Gender</div>
+                <div>Preference</div>
+            </div>
+            <div id="design-b-attendee-container">
+            </div>
+        </section>
     </main>
 
     <script src="https://kit.fontawesome.com/320539620b.js" crossorigin="anonymous"></script>
-
+    <script type="module" src="../assets/js/designBScript.js"></script>
 </body>
 
 </html>
