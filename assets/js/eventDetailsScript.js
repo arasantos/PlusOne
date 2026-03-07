@@ -62,7 +62,7 @@ function updateUI(eventId) {
     if (isGoing) {
         imComingBtn.textContent = "YOU’RE GOING";
         viewBtn.classList.remove("hidden");
-        viewBtn.href = `designA.html`;
+        viewBtn.href = `designB.html?eventId=${eventId}`;
     } else {
         imComingBtn.textContent = "I’M COMING";
         viewBtn.classList.add("hidden");
