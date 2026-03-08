@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlusOne</title>
+    <title>PlusOne - Profile</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,33 +13,56 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="../assets/css/globalStyle.css">
-
+    <link rel="stylesheet" href="../assets/css/userBio.css">
 </head>
 
 <body>
-    <!-- App Header -->
     <header class="app-header">
         <div class="header-inner">
-            <!-- Optional back button, you can unhide it by removing the back-button-hidden class -->
-            <button class="back-btn back-button-hidden" onclick="history.back()">
+            <button class="back-btn" onclick="history.back()">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
 
             <a href="../index.html" class="logo-tag">
-                <p class="logo">Plus One</p>
+                <p class="logo">Profile</p>
             </a>
 
-            <!-- This keeps the logo centered, because i put the invisible back button -->
-            <div class="header-spacer"></div>
+            <button class="add-friend-btn" id="addFriendBtn">Add Friend</button>
         </div>
     </header>
 
-    <main>
-        <!-- Your code goes hereee -->
+    <main class="profile-page">
+        <section class="profile-card">
+            <div class="profile-hero">
+                <img id="profileImage" class="profile-image" src="" alt="Profile picture">
+
+                <div class="profile-top-info">
+                    <div class="name-row">
+                        <h1 id="profileName">Loading...</h1>
+                        <span id="profileGender" class="gender-pill">...</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <section class="profile-section">
+                <h2>Likes</h2>
+                <div id="likesList" class="tag-list"></div>
+            </section>
+
+            <section class="profile-section">
+                <h2>Dislikes</h2>
+                <div id="dislikesList" class="tag-list"></div>
+            </section>
+
+            <section class="profile-section">
+                <h2>Hobbies</h2>
+                <div id="hobbiesList" class="tag-list"></div>
+            </section>
+        </section>
     </main>
-
     <script src="https://kit.fontawesome.com/320539620b.js" crossorigin="anonymous"></script>
-
+    <script type="module" src="../assets/js/userBio.js"></script>
 </body>
 
 </html>
