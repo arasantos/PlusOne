@@ -29,6 +29,7 @@ function renderEventDetail(event) {
     const title = document.getElementById("eventTitle");
     const location = document.getElementById("eventLocation");
     const date = document.getElementById("eventDate");
+    const time = document.getElementById("eventTime");
     const desc = document.getElementById("eventDescription");
     const postedBy = document.getElementById("eventPostedBy");
 
@@ -47,6 +48,7 @@ function renderEventDetail(event) {
     if (title) title.textContent = event.name;
     if (location) location.textContent = event.location;
     if (date) date.textContent = event.eventDate;
+    if (time) time.textContent = event.time;
     if (desc) desc.textContent = event.description || "";
     if (postedBy) {
         postedBy.innerHTML = `<strong>Posted by:</strong> ${event.postedByName}`;
