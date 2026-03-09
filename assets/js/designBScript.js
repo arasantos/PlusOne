@@ -16,6 +16,17 @@ function renderNotFound() {
 const eventId = getEventIdFromUrl();
 const selectedEvent = events.find(e => e.id === eventId);
 
+//taken from userBio.js ---
+function fixImagePath(path) {
+    if (!path) return "";
+
+    if (path.startsWith("../")) return path;
+    if (path.startsWith("./")) return `../${path.slice(2)}`;
+    if (path.startsWith("/")) return path;
+
+    return `../${path}`;
+}
+
 //design B variables
 
 let attendeeList = [];
@@ -35,7 +46,7 @@ function getAttendees(event) {
                         id: person.id,
                         name: person.name,
                         gender: person.gender,
-                        image: person.image,
+                        image: fixImagePath(person.image),
                         preferenceLabel: attendee.preference.label,
                         preferenceId: attendee.preference.id,
                         preferenceIcon: attendee.preference.icon,
