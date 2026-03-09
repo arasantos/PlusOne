@@ -1,3 +1,7 @@
+.header-inner {
+    justify-content: space-between; /* Centering header for homepage only */
+}
+
 .search-bar {
     display: flex;
     align-items: center;

@@ -48,7 +48,6 @@ main {
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0 16px;
 }
 
@@ -69,6 +68,7 @@ main {
     font-size: 18px;
     cursor: pointer;
     color: var(--text-primary);
+    margin-right: 24px;
 }
 
 .back-button-hidden {
