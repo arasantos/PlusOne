@@ -31,7 +31,7 @@
             </a>
 
             <!-- This keeps the logo centered, because i put the invisible back button -->
-            <div class="header-spacer"></div>
+            <button id="design-b-filter-button"> <i class="fa fa-sliders"></i> Filter</button>
         </div>
     </header>
 
@@ -43,6 +43,43 @@
                 <div>Gender</div>
                 <div>Preference</div>
             </div>
+            <div id="design-b-filter-overlay" class="hidden"></div>
+            <div id="design-b-filter-panel" class="hidden">
+                <h3>Filter</h3>
+                <div id="design-b-filter-gender" class="design-b-filter-section">
+                    <h4>Gender</h4>
+                    <label>
+                        <input type="checkbox" class="design-b-filter-gender-check" value="Man"> Man
+                    </label>
+            
+                    <label>
+                        <input type="checkbox" class="design-b-filter-gender-check" value="Woman"> Woman
+                    </label>
+            
+                    <label>
+                        <input type="checkbox" class="design-b-filter-gender-check" value="Non-binary"> Non-Binary
+                    </label>
+                </div>
+                <div id="design-b-filter-preference" class="design-b-filter-section">
+                    <h4>Preference</h4>
+                    <label>
+                        <input type="checkbox" class="design-b-filter-preference-check" value="full"> Full
+                    </label>
+            
+                    <label>
+                        <input type="checkbox" class="design-b-filter-preference-check" value="partial"> Partial
+                    </label>
+            
+                    <label>
+                        <input type="checkbox" class="design-b-filter-preference-check" value="transit_only"> Transit Only
+                    </label>
+                </div>
+            
+                <br><br>
+            
+                <button id="design-b-filter-apply">Apply</button>
+                <button id="design-b-filter-cancel">Cancel</button>
+            </div>
             <div id="design-b-attendee-container">
             </div>
         </section>
@@ -50,6 +87,7 @@
 
     <script src="https://kit.fontawesome.com/320539620b.js" crossorigin="anonymous"></script>
     <script type="module" src="../assets/js/designBScript.js"></script>
+    <script type="module" src="../assets/js/designBFilterScript.js"></script>
 </body>
 
 </html>

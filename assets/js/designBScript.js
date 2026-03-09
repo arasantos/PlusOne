@@ -1,5 +1,6 @@
 import { people } from "./people.js"
 import { events } from "./events.js"
+import { PREFERENCES } from "./preferences.js";
 
 //taken from eventDetailsScript.js ---
 function getEventIdFromUrl() {
@@ -15,7 +16,12 @@ function renderNotFound() {
 const eventId = getEventIdFromUrl();
 const selectedEvent = events.find(e => e.id === eventId);
 
-//design B helper functions
+//design B variables
+
+let attendeeList = [];
+let currentFilter = { gender: [], preference: [] };
+
+//design B function
 
 //return list of "attendees" which is basically a flat object for the people attributes needed
 function getAttendees(event) {
@@ -30,6 +36,7 @@ function getAttendees(event) {
                         name: person.name,
                         gender: person.gender,
                         image: person.image,
+                        preferenceLabel: attendee.preference.label,
                         preferenceId: attendee.preference.id,
                         preferenceIcon: attendee.preference.icon,
                     }
@@ -42,7 +49,7 @@ function getAttendees(event) {
 
 //render attendee object to li
 function renderAttendee(attendee) {
-    console.log("renderAttenndee(%o)", attendee);
+    console.log("renderAttendee(%o)", attendee);
     let toReturn = document.createElement('div');
     toReturn.classList.add("design-b-row-attendee");
     if (attendee) {
@@ -55,7 +62,7 @@ function renderAttendee(attendee) {
             avatarImg.src = attendee.image;
         } else {
             avatarImg = document.createElement('i');
-            avatarImg.classList.add(...['fa','fa-user']);
+            avatarImg.classList.add(...['fa', 'fa-user']);
         }
         avatarImg.alt = `${attendee.name}'s avatar`;
         avatarDiv.appendChild(avatarImg);
@@ -76,6 +83,9 @@ function renderAttendee(attendee) {
         let preferenceIcon = document.createElement('i');
         preferenceIcon.classList.add(...attendee.preferenceIcon.split(' '));
         preferenceDiv.appendChild(preferenceIcon)
+        let preferenceText = document.createElement('p');
+        preferenceText.textContent = attendee.preferenceLabel;
+        preferenceDiv.appendChild(preferenceText);
 
         //container div
         toReturn.setAttribute('id', attendee.id);
@@ -90,15 +100,32 @@ function renderAttendee(attendee) {
     }
 }
 
-function renderAttendeeList(attendeeList) {
-    console.log("updateAttendeeList: %o", attendeeList)
+function renderAttendeeList(attendeeList, filter = { gender: [], preference: [] }) {
+    console.log("updateAttendeeList: %o, %o", attendeeList, filter)
     const attendeeContainer = document.getElementById('design-b-attendee-container');
     attendeeContainer.innerHTML = "";
-    attendeeList.forEach(a => { attendeeContainer.appendChild(renderAttendee(a)) })
+
+    let toRender = attendeeList;
+
+    if (filter.gender.length > 0) {
+        toRender = toRender.filter(a =>
+            filter.gender.includes(a.gender)
+        )
+    }
+
+    // keys.length -1 since flexible is not a part of the filter
+    if (filter.preference.length > 0 && filter.preference.length < Object.keys(PREFERENCES).length - 1) {
+        toRender = toRender.filter(a =>
+            a.preferenceId == PREFERENCES.FLEXIBLE ||
+            filter.preference.includes(a.preferenceId)
+        )
+    }
+
+    toRender.forEach(a => { attendeeContainer.appendChild(renderAttendee(a)) })
 }
 
 function renderDesignB(event) {
-    const attendeeList = getAttendees(event);
+    attendeeList = getAttendees(event);
     renderAttendeeList(attendeeList);
 }
 
@@ -109,6 +136,12 @@ if (!eventId || !selectedEvent) {
 } else {
     console.log(selectedEvent)
     console.log(people)
-    console.log(getAttendees(selectedEvent))
     renderDesignB(selectedEvent);
+}
+
+export {
+    attendeeList,
+    currentFilter,
+    renderAttendee,
+    renderAttendeeList,
 }
