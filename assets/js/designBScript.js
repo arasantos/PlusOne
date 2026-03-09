@@ -127,7 +127,7 @@ function renderAttendeeList(attendeeList, filter = { gender: [], preference: [] 
     // keys.length -1 since flexible is not a part of the filter
     if (filter.preference.length > 0 && filter.preference.length < Object.keys(PREFERENCES).length - 1) {
         toRender = toRender.filter(a =>
-            a.preferenceId == PREFERENCES.FLEXIBLE ||
+            a.preferenceId == PREFERENCES.FLEXIBLE.id ||
             filter.preference.includes(a.preferenceId)
         )
     }
