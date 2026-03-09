@@ -32,6 +32,7 @@ body, html {
     background:
         radial-gradient(circle at top, #fff7eb 0%, var(--page-bg) 45%);
     color: var(--text-primary);
+    height: 100%;
 }
 
 main {

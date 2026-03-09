@@ -11,8 +11,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Passion+One:wght@400;700;900&display=swap"
         rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com" integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="../assets/css/globalStyle.css">
+    <link rel="stylesheet" href="../assets/css/designA.css">
 
 </head>
 
@@ -20,13 +23,12 @@
     <!-- App Header -->
     <header class="app-header">
         <div class="header-inner">
-            <!-- Optional back button, you can unhide it by removing the back-button-hidden class -->
-            <button class="back-btn back-button-hidden" onclick="history.back()">
+            <button class="back-btn" onclick="history.back()">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
 
             <a href="../index.html" class="logo-tag">
-                <p class="logo">Plus One</p>
+                <p class="logo">Attendees</p>
             </a>
 
             <!-- This keeps the logo centered, because i put the invisible back button -->
@@ -35,10 +37,28 @@
     </header>
 
     <main>
-        <!-- Your code goes hereee -->
+        <div class="attendee-page-container">
+            <p class="page-heading">Find attendees with similar interests as you</p>
+
+            <div class="card-container" id="cardContainer"></div>
+
+            <div class="bottom-buttons">
+                <button id="noButton" class="no-button" onclick="handleSwipeAsButtonClick(-100)">
+                    <i class="fa-solid fa-x"></i>
+                </button>
+                
+                <button id="saveLaterButton" class="save-later-button" onclick="handleSaveLaterButton()">
+                    <i class="fa-solid fa-bookmark"></i>
+                </button>
+                <button id="yesButton" class="yes-button" onclick="handleSwipeAsButtonClick(100)">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+            </div>
+        </div>
     </main>
 
     <script src="https://kit.fontawesome.com/320539620b.js" crossorigin="anonymous"></script>
+    <script type="module" src="/assets/js/designAScript.js" crossorigin="anonymous"></script>
 
 </body>
 

@@ -1,0 +1,169 @@
+/* override global style */
+main {
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.attendee-page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 90vh;
+}
+
+.page-heading {
+    padding: 15px 0 5px 5px;
+}
+
+.card-container {
+    position: relative;
+    width: 100%;
+    height: 72%;
+}
+
+@media screen and (min-height: 400px) {
+    .card-container {
+        height: 72%;
+    }
+}
+
+@media screen and (min-height: 701px) {
+    .card-container {
+        height: 78%;
+    }
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    color: var(--text-primary);
+    text-align: left;
+
+    user-select: none;
+    transition: transform 0.3s, opacity 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 20px;
+
+    box-shadow: 0px 1px 5px #cacaca;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.card-content p {
+    text-align: end;
+    padding-left: 6px;
+}
+
+.empty-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    color: #666;
+    padding: 40px;
+}
+
+.img-container {
+    height: 300px;
+    width: 100%;
+}
+
+.details-title {
+    font-weight: bold;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.gender {
+    background-color: #d3d4d4;
+    border-radius: 10px;
+    padding: 5px 7px;
+    height: fit-content;
+}
+
+.person-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px 0px 15px 0px;
+}
+
+.likes, .dislikes, .hobbies {
+    padding-left: 25px;
+    padding-bottom: 10px;
+}
+
+button {
+    border-radius: 10px;
+    
+    font-size: 25px;
+    color: var(--text-secondary);
+
+    padding: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.no-button {
+    background-color: #ce5454;
+    border: solid #6e2d2d 2px;
+}
+
+.no-button:active {
+    background-color: #9c4141;
+}
+
+.save-later-button {
+    background-color: #d3cc66;
+    border: solid #5a5728 2px;
+}
+
+.save-later-button:active {
+    background-color: #969044;
+}
+
+.yes-button {
+    background-color: #04AA6D;
+    border: solid #01472e 2px;
+}
+
+.yes-button:active {
+    background-color: #01633f;
+}
+
+.bottom-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
