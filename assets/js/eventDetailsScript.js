@@ -62,11 +62,11 @@ function updateUI(eventId) {
     if (!imComingBtn || !viewBtn) return;
 
     if (isGoing) {
-        imComingBtn.textContent = "YOU’RE GOING";
+        imComingBtn.textContent = "JOINED EVENT";
         viewBtn.classList.remove("hidden");
         viewBtn.href = `designA.html`;
     } else {
-        imComingBtn.textContent = "I’M COMING";
+        imComingBtn.textContent = "JOIN EVENT";
         viewBtn.classList.add("hidden");
         viewBtn.href = "#";
     }
