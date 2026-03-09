@@ -27,8 +27,6 @@ for (let i = MAX_MATCHES - 1; i >= 0; i--) {
     container.appendChild(card);
 }
 
-console.log(_people)
-
 // create an array of people with only the similarities they have with the user
 // then sort the array based on how many things they have in common with the user
 // not including gender preference though
