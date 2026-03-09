@@ -1,5 +1,22 @@
 import { PREFERENCES } from "./preferences.js"
 
+const MOCK_ATTENDEES = [
+    { peopleId: "p1", preference: PREFERENCES.FULL },
+    { peopleId: "p2", preference: PREFERENCES.PARTIAL },
+    { peopleId: "p3", preference: PREFERENCES.TRANSIT_ONLY },
+    { peopleId: "p4", preference: PREFERENCES.TRANSIT_ONLY },
+    { peopleId: "p5", preference: PREFERENCES.FULL },
+    { peopleId: "p6", preference: PREFERENCES.PARTIAL },
+    { peopleId: "p7", preference: PREFERENCES.TRANSIT_ONLY },
+    { peopleId: "p8", preference: PREFERENCES.PARTIAL },
+    { peopleId: "p9", preference: PREFERENCES.FULL },
+    { peopleId: "p10", preference: PREFERENCES.PARTIAL },
+    { peopleId: "p11", preference: PREFERENCES.TRANSIT_ONLY },
+    { peopleId: "p12", preference: PREFERENCES.FLEXIBLE },
+    { peopleId: "p13", preference: PREFERENCES.FLEXIBLE },
+
+];
+
 export const events = [
     {
         id: "event1",
@@ -10,11 +27,7 @@ export const events = [
         time: "3:00 PM",
         postedByName: "John Doe",
         location: "123 Blvd",
-        people: [
-            { peopleId: "p1", preference: PREFERENCES.FULL },
-            { peopleId: "p2", preference: PREFERENCES.PARTIAL },
-            { peopleId: "p3", preference: PREFERENCES.TRANSIT_ONLY },
-            { peopleId: "p4", preference: PREFERENCES.FLEXIBLE }],
+        people: MOCK_ATTENDEES,
         isViewed: false
     },
 
@@ -27,7 +40,7 @@ export const events = [
         time: "5:00 PM",
         postedByName: "Jane Doe",
         location: "234 Blvd",
-        people: [],
+        people: MOCK_ATTENDEES,
         isViewed: true
     },
 
@@ -40,7 +53,7 @@ export const events = [
         time: "7:00 PM",
         postedByName: "Sarah Doe",
         location: "345 Blvd",
-        people: [],
+        people: MOCK_ATTENDEES,
         isViewed: false
     },
 
@@ -53,7 +66,7 @@ export const events = [
         time: "8:00 PM",
         postedByName: "Marcus Doe",
         location: "456 Blvd",
-        people: [],
+        people: MOCK_ATTENDEES,
         isViewed: false
     }
 ];
