@@ -306,7 +306,6 @@ function swipeUp() {
 /**
  * triggers the swiping animation by button click
  * if negative direction, slides the card to the left as X was pressed
- * the direction must be bigger than 50 (swipe right) or smaller than -50 (swipe left)
  * @param {int} direction: 100 if right, -100 if left
  */
 function handleSwipeAsButtonClick(direction) {
