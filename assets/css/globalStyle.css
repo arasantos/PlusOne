@@ -3,9 +3,17 @@
     /* Color pallete */
     --cream: #FFFDF1;
     --brown: #562F00;
+    --red: #ce5454;
+    --green: #04AA6D;
+    --blue: #6699d3;
+    --red-dark: #6e2d2d;
+    --green-dark: #01472e;
+    --blue-dark: #2a3f57;
+
     --page-bg: var(--cream);
     --header-bg: rgba(255, 253, 241, 0.92);
     --text-primary: var(--brown);
+    --text-primary-light: var(--cream);
     --text-secondary: #7a5226;
     --border-color: #f0d7bb;
     --primary-button-color: #FFCE99;
@@ -18,7 +26,7 @@
     box-sizing: border-box;
 }
 
-body {
+body, html {
     font-family: 'Inter', sans-serif;
     background:
         radial-gradient(circle at top, #fff7eb 0%, var(--page-bg) 45%);
@@ -30,7 +38,6 @@ main {
     margin: 0 auto;
     padding: 16px;
 }
-
 
 /* Header */
 .app-header {
@@ -82,5 +89,13 @@ main {
 
 .header-spacer {
     width: 18px;
+}
+
+.gender-pill {
+    background-color: var(--brown);
+    color: var(--text-primary-light);
+    border-radius: 999px;
+    padding: 5px 7px;
+    height: fit-content;
 }
 /* End of header */
