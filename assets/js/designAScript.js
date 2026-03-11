@@ -2,7 +2,19 @@ import { people } from "./people.js"
 import { user1 } from "./users.js"
 
 // change this to be the specific user for the participant in the experiment
-const user = user1; 
+const user = user1;
+
+/**
+ * so the page rerenders if clicking back from userBio
+ * this is already the behaviour for local environment
+ * but in github pages, this is needed because they go back
+ * using cache
+ */
+window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+        window.location.reload();
+    }
+})
 
 const sortedPeople = handleFindingSimilarPeople();
 const MAX_MATCHES = sortedPeople.length;
@@ -271,7 +283,12 @@ function handleHorizontalSwipe(deltaX) {
         currentCard.style.opacity = 0;
         
         if (deltaX > 0) {
-            goToPersonPage(currentCard.id);
+            setTimeout(() => {
+                goToPersonPage(currentCard.id);
+                currentCard.remove();
+                currentCard = null;
+                handleEmptyCardStack();
+            }, 100);
         }
 
         else {
