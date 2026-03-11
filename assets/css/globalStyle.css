@@ -17,6 +17,7 @@
     --text-secondary: #7a5226;
     --border-color: #f0d7bb;
     --primary-button-color: #FFCE99;
+    --secondary-button-color: #006D5B;
     --shadow-header: 0 4px 14px rgba(86, 47, 0, 0.08);
 }
 
@@ -34,7 +35,7 @@ body, html {
 }
 
 main {
-    max-width: 430px; /* phone width */
+    max-width: 430px;
     margin: 0 auto;
     padding: 16px;
 }
@@ -53,16 +54,46 @@ main {
 
 .header-inner {
     height: 60px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
     align-items: center;
-    padding: 0 16px;
+    justify-content: center;
 }
 
-.logo {
+.header-button {
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    background: var(--primary-button-color);
+    margin-left: auto;
+    white-space: nowrap;
+    margin-right: 16px;
+}
+
+.header-left-section {
+    display: flex;
+    padding-left: 16px;
+}
+
+.logo, .page-title {
     font-family: 'Passion One', sans-serif;
     font-size: 24px;
     color: var(--brown);
     letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.logo {
+    text-align: center;
+}
+
+.page-title {
+    text-align: left;
 }
 
 .logo-tag {

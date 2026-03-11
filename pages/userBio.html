@@ -19,15 +19,20 @@
 <body>
     <header class="app-header">
         <div class="header-inner">
-            <button class="back-btn" onclick="history.back()">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
+            <!-- Optional back button, you can unhide it by removing the back-button-hidden class -->
+            <div class="header-left-section">
+                <button class="back-btn" onclick="history.back()">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <a href="../index.html" class="logo-tag">
+                    <p class="page-title">Profile</p>
+                </a>
+            </div>
 
-            <a href="../index.html" class="logo-tag">
-                <p class="logo">Profile</p>
-            </a>
-
-            <button class="add-friend-btn" id="addFriendBtn">Add Friend</button>
+            <!-- This keeps the title centered, because now the page title is left alighned -->
+            <div class="header-spacer"></div>
+        
+            <button class="header-button" id="addFriendBtn"> <i class="fas fa-user-plus"></i> <span id="addFriendBtnTxt">Add Friend</span></button>
         </div>
     </header>
 

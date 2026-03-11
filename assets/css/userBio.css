@@ -128,13 +128,9 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
 }
 
-.add-friend-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 22px rgba(15, 23, 42, 0.22);
-}
-
-.add-friend-btn.added {
-    background: linear-gradient(135deg, #10b981, #059669);
+.added {
+    color: var(--text-primary-light);
+    background: var(--secondary-button-color);
 }
 
 @media (max-width: 600px) {

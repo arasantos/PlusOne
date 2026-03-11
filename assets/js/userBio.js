@@ -7,6 +7,7 @@ const likesList = document.getElementById("likesList");
 const dislikesList = document.getElementById("dislikesList");
 const hobbiesList = document.getElementById("hobbiesList");
 const addFriendBtn = document.getElementById("addFriendBtn");
+const addFriendBtnTxt = document.getElementById("addFriendBtnTxt");
 const profileCard = document.querySelector(".profile-card");
 
 function getPersonIdFromURL() {
@@ -66,11 +67,11 @@ function setupAddFriend(person) {
 
   addFriendBtn.addEventListener("click", () => {
     if (!requestSent) {
-      addFriendBtn.textContent = `Request sent to ${person.name.split(" ")[0]}`;
+      addFriendBtnTxt.textContent = `Request sent`;
       addFriendBtn.classList.add("added");
       requestSent = true;
     } else {
-      addFriendBtn.textContent = "Add Friend";
+      addFriendBtnTxt.textContent = "Add Friend";
       addFriendBtn.classList.remove("added");
       requestSent = false;
     }

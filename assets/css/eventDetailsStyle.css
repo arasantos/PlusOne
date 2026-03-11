@@ -63,10 +63,13 @@ main {
     min-height: 44px;
 }
 
+p {
+    color: #333;
+}
+
 .event-posted {
     margin-top: 10px;
     font-size: 14px;
-    color: #222;
 }
 
 .header-action {
@@ -90,8 +93,8 @@ main {
 
     border: none;
 
-    font-size: 18px;
-    font-weight: 800;
+    font-size: 20px;
+    font-weight: bold;
     letter-spacing: 0.4px;
 
     cursor: pointer;
