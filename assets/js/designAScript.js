@@ -37,7 +37,6 @@ for (let i = MAX_MATCHES - 1; i >= 0; i--) {
 document.getElementById('yesButton').addEventListener('click', () => {
     console.log("debug", currentCard);
     handleSwipeAsButtonClick(100);
-    goToPersonPage(currentCard.id);
 });
 
 document.getElementById('noButton').addEventListener('click', () => {
@@ -300,7 +299,7 @@ function swipeUp() {
         currentCard.remove();
         handleEmptyCardStack();
         currentCard = null;
-    }, 400);
+    }, 100);
 }
 
 /**
@@ -325,5 +324,5 @@ function handleSaveLaterButton() {
 function goToPersonPage(personId) {
     setTimeout(() => {
         window.location.href = `userBio.html?id=${personId}`;
-    }, 800);
+    }, 100);
 }

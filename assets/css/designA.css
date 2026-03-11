@@ -11,8 +11,16 @@ main {
     height: 90svh;
 }
 
+/* so there is no horizontal scrollbar esp on going back from user bio */
+.attendee-page-container::-webkit-scrollbar {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
 .page-heading {
     padding: 15px 0 5px 5px;
+    font-size: 14px;
 }
 
 .card-container {
@@ -66,6 +74,10 @@ main {
 .card-content p {
     text-align: end;
     padding-left: 6px;
+}
+
+li {
+    font-size: 14px;
 }
 
 .empty-card-content {
