@@ -25,6 +25,7 @@
 /*container  */
 #design-b-container {
     margin: auto;
+    color: var(--text-primary);
 }
 
 #design-b-header,
@@ -60,7 +61,8 @@
     border-radius: var(--radius);
     padding: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-        border: var(--border-color)
+    border: var(--border-color);
+    color: var(--text-secondary);
 }
 
 /* avatar */
@@ -151,6 +153,7 @@
     gap: 8px;
     margin-bottom: 6px;
     font-size: var(--textSize);
+    color: var(--text-secondary);
 }
 
 .design-b-filter-section input {
@@ -168,8 +171,10 @@
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 8px;
+    color: var(--text-secondary);
 }
 
 #design-b-filter-apply {
-    background: var(--primary-button-color)
+    background: var(--primary-button-color);
+    color: var(--text-primary) !important;
 }
