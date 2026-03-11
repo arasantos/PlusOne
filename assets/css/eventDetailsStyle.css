@@ -99,6 +99,7 @@ p {
 
     cursor: pointer;
     background: var(--primary-button-color);
+    color: var(--text-primary);
     box-shadow: 0 -2px 5px rgba(0,0,0,0.18);
     transition: transform 0.12s ease, filter 0.12s ease;
 }
