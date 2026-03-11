@@ -22,6 +22,7 @@
     <header class="app-header">
         <div class="header-inner">
             <!-- Optional back button, you can unhide it by removing the back-button-hidden class -->
+            <div class="header-left-section">
             <button class="back-btn" onclick="history.back()">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
@@ -29,9 +30,12 @@
             <a class="logo-tag">
                 <p class="logo">Attendees</p>
             </a>
+            </div>
+            
+            <div class="header-spacer"></div>
 
             <!-- This keeps the logo centered, because i put the invisible back button -->
-            <button id="design-b-filter-button"> <i class="fa fa-sliders"></i> Filter</button>
+            <button id="design-b-filter-button" class="header-button"> <i class="fa fa-sliders"></i> Filter</button>
         </div>
     </header>
 

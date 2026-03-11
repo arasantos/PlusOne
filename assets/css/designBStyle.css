@@ -24,19 +24,6 @@
     border: var(--border-color);
 }
 
-#design-b-filter-button {
-    font-size: 13px;
-    font-weight: 700;
-    text-decoration: none;
-    padding: 8px 10px;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    color: var(--text-primary);
-        background: var(--primary-button-color);
-        margin-left: auto;
-        margin-right: 10px;
-}
-
 /*container  */
 #design-b-container {
     margin: auto;
