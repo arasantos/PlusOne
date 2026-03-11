@@ -34,6 +34,7 @@
     color: var(--text-primary);
         background: var(--primary-button-color);
         margin-left: auto;
+        margin-right: 10px;
 }
 
 /*container  */
