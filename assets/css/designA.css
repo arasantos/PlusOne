@@ -75,7 +75,6 @@ main {
     text-align: center;
     width: 100%;
     height: 100%;
-    font-size: 18px;
     color: #666;
     padding: 40px;
 }
@@ -115,7 +114,7 @@ img {
     padding-bottom: 10px;
 }
 
-button {
+.bottom-buttons .yes-button, .bottom-buttons .no-button, .bottom-buttons .save-later-button {
     border-radius: 10px;
     
     font-size: 25px;
