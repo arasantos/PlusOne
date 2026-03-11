@@ -37,6 +37,10 @@
     text-align: center;
     gap: 3px;
 }
+.design-b-row-attendee:active {
+    filter: brightness(90%);
+    transform: scale(0.99);
+}
 /*list header */
 #design-b-header {
     font-size: 12px;
