@@ -153,7 +153,7 @@
     gap: 8px;
     margin-bottom: 6px;
     font-size: var(--textSize);
-    color: var(--text-secondary);
+    color: var(--text-primary);
 }
 
 .design-b-filter-section input {
@@ -171,10 +171,25 @@
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 8px;
-    color: var(--text-secondary);
+    color: var(--text-primary);
 }
 
 #design-b-filter-apply {
     background: var(--primary-button-color);
     color: var(--text-primary) !important;
+}
+
+#design-b-filter-panel .design-b-filter-label {
+    display: grid;
+    grid-template-columns: 13px 80px 5fr;
+    text-wrap-style: pretty;
+    margin-bottom: 10px;
+}
+
+.design-b-filter-explain-text {
+    color: var(--text-secondary);
+}
+
+.design-b-filter-option-text {
+    font-weight: bold;
 }

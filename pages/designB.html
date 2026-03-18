@@ -23,15 +23,15 @@
         <div class="header-inner">
             <!-- Optional back button, you can unhide it by removing the back-button-hidden class -->
             <div class="header-left-section">
-            <button class="back-btn" onclick="history.back()">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
+                <button class="back-btn" onclick="history.back()">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
 
-            <a class="logo-tag">
-                <p class="logo">Attendees</p>
-            </a>
+                <a class="logo-tag">
+                    <p class="logo">Attendees</p>
+                </a>
             </div>
-            
+
             <div class="header-spacer"></div>
 
             <!-- This keeps the logo centered, because i put the invisible back button -->
@@ -48,7 +48,7 @@
                 <div>Preference</div>
             </div>
             <div id="design-b-filter-overlay" class="hidden"></div>
-            
+
             <div id="design-b-filter-panel" class="hidden">
 
                 <h3>Filter</h3>
@@ -57,34 +57,52 @@
 
                 <div id="design-b-filter-gender" class="design-b-filter-section">
                     <h4>Gender</h4>
-                    <label>
-                        <input type="checkbox" class="design-b-filter-gender-check" value="Man"> Man
+                    <label class="design-b-filter-label">
+                        <input type="checkbox" class="design-b-filter-gender-check" value="Man">
+                        <span class="design-b-filter-option-text">Man</span>
                     </label>
-            
-                    <label>
-                        <input type="checkbox" class="design-b-filter-gender-check" value="Woman"> Woman
+
+                    <label class="design-b-filter-label">
+                        <input type="checkbox" class="design-b-filter-gender-check" value="Woman">
+                        <span class="design-b-filter-option-text">Woman</span>
                     </label>
-            
-                    <label>
-                        <input type="checkbox" class="design-b-filter-gender-check" value="Non-binary"> Non-Binary
+
+                    <label class="design-b-filter-label">
+                        <input type="checkbox" class="design-b-filter-gender-check" value="Non-binary">
+                        <span class="design-b-filter-option-text">Non-Binary</span>
                     </label>
                 </div>
 
                 <div id="design-b-filter-preference" class="design-b-filter-section">
                     <h4>Preference</h4>
-                    <label>
-                        <input type="checkbox" class="design-b-filter-preference-check" value="full"> Full
+                    <label class="design-b-filter-label">
+                        <input type="checkbox" class="design-b-filter-preference-check" value="full">
+                        <span class="design-b-filter-option-text">Full</span>
+
+                        <span class="design-b-filter-explain-text">
+                            together for the entire event
+                        </span>
                     </label>
-            
-                    <label>
-                        <input type="checkbox" class="design-b-filter-preference-check" value="partial"> Partial
+
+                    <label class="design-b-filter-label">
+                        <input type="checkbox" class="design-b-filter-preference-check" value="partial">
+                        <span class="design-b-filter-option-text">Partial</span>
+
+                        <span class="design-b-filter-explain-text">
+                            together for parts of the event
+                        </span>
                     </label>
-            
-                    <label>
-                        <input type="checkbox" class="design-b-filter-preference-check" value="transit_only"> Transit Only
+
+                    <label class="design-b-filter-label">
+                        <input type="checkbox" class="design-b-filter-preference-check" value="transit_only">
+                        <span class="design-b-filter-option-text">Transit Only</span>
+
+                        <span class="design-b-filter-explain-text">
+                            together on the way to and from, no further commitments
+                        </span>
                     </label>
                 </div>
-            
+
                 <br><br>
 
                 <div id="design-b-filter-footer">
