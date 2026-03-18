@@ -62,11 +62,17 @@ function updateUI(eventId) {
     if (!imComingBtn || !viewBtn) return;
 
     if (isGoing) {
-        imComingBtn.textContent = "Joined Event";
+        imComingBtn.textContent = "Leave Event";
+        imComingBtn.classList.add("going");
+        imComingBtn.classList.remove("not-going");
+
         viewBtn.classList.remove("hidden");
         viewBtn.href = `designA.html`;
     } else {
         imComingBtn.textContent = "Join Event";
+        imComingBtn.classList.add("not-going");
+        imComingBtn.classList.remove("going");
+
         viewBtn.classList.add("hidden");
         viewBtn.href = "#";
     }

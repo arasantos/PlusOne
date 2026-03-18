@@ -108,6 +108,16 @@ p {
     transition: transform 0.12s ease, filter 0.12s ease;
 }
 
+.bottom-cta.going {
+    background: var(--red-dark);
+    color: var(--text-primary-light);
+}
+
+.bottom-cta.not-going {
+    background: var(--secondary-button-color);
+    color: var(--text-primary-light);
+}
+
 .bottom-cta:active {
     filter: brightness(90%);
     transform: scale(0.99);
